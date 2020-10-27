@@ -90,6 +90,14 @@ class BigInt {
         bool operator==(const std::string&) const;
         bool operator!=(const std::string&) const;
 
+        // Bitwise operators:
+        BigInt operator|(const BigInt&) const;
+        BigInt operator&(const BigInt&) const;
+        BigInt operator^(const BigInt&) const;
+        BigInt operator~() const;
+        BigInt operator<<(const BigInt&) const;
+        BigInt operator>>(const BigInt&) const;
+
         // I/O stream operators:
         friend std::istream& operator>>(std::istream&, BigInt&);
         friend std::ostream& operator<<(std::ostream&, const BigInt&);
